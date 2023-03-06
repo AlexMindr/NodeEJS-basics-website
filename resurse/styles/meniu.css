@@ -1,0 +1,216 @@
+nav{
+    width:100%;
+    position:fixed;
+    background-image: linear-gradient(to right, rgb(28, 0, 128) , rgb(204, 0, 255));
+    height:2rem;
+    top:0px;
+    left:0px;
+    font-family:Arial, sans-serif;
+    z-index:100;
+    }
+ul.menu>li, ul.menu>li>ul.submenu>li{
+        display:block;		
+        font-size:1rem;
+        font-weight:bold;
+        height:2rem;
+        line-height:2rem;
+        text-align:center;		
+        list-style-type:none;    
+        background-color:transparent;
+    }
+ul.menu>li{
+        float:left;
+        width:9rem;
+       }
+       
+ul.menu>li>ul.submenu{
+           position:relative;
+           top:0px;
+}
+
+ul.menu>li>a,ul.menu>li>label,ul.submenu>li>a{
+    display:block;
+    height:	100%;
+    text-decoration:none;
+    color:white;
+    transition:all 1s linear;
+    
+}
+
+ul.menu a:hover,ul.menu label:hover{
+    background:rgb(47, 68, 255);
+    transition: all 1s linear;
+    color:rgb(255, 208, 0);
+    }
+
+#hamburger{
+    display:none;
+    height:2.5rem;
+    }
+#hamburger img{
+    height:100%;
+    width:auto;
+    }
+#ch-menu, .ch-submenu {
+    display:none;
+    }
+#ch-menu, .ch-submenu2{
+    display:none;
+    }
+ul.submenu{
+    display:none;
+    }
+/* aparitie submeniu */ 
+
+.ch-submenu:checked~ul.submenu{
+    display:block;  
+    background-image: linear-gradient(to bottom right, rgb(28, 0, 128) , rgb(204, 0, 255));
+    transform-origin:50% 0%;
+    animation:pop;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-duration: 1s;
+    }
+
+.ch-submenu2:checked~ul.submenu{
+    display:block;
+    background-image: linear-gradient(to bottom right, rgb(28, 0, 128) , rgb(204, 0, 255));  
+    transform-origin:50% 0%;
+    animation:pop;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-duration: 1s;
+    }
+    
+    @keyframes pop{
+        0%{
+            transform:scale(0);
+            opacity:0.1
+        }
+        100%{
+            transform:scale(1);
+            opacity:1;
+        }
+    }
+#home #hide {
+    display:none;    
+    }
+
+
+
+@media only screen and (max-width:600px){
+     
+    ul.menu{
+        display:none;  
+      }
+    #ch-menu:checked~ul.menu{
+        display:block;
+        transform-origin:0% 0%;
+        animation:hmb;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-play-state: running;
+        animation-duration: 1s;
+        mask-image:linear-gradient(to bottom,black,black 20%,transparent 80%, transparent);
+        mask-size:100% 1000%;
+        mask-position:0% 90%;
+        -webkit-mask-image: linear-gradient(to bottom,black,black 20%,transparent 80%, transparent);
+        -webkit-mask-size:100% 1000%;
+        -webkit-mask-position:0% 90%;
+        
+    }
+      @keyframes hmb{
+            0%{
+              
+              }
+            100%{
+                
+               mask-position:0% 0%;
+               -webkit-mask-position:0% 0%;
+               mask-image:none;
+               -webkit-mask-image:none;
+  
+            }
+      }
+        
+    ul.menu>li{
+        width:100%;
+        background-image: linear-gradient(to right,white , black);
+        float:none;
+      }
+
+    nav{ 
+        background-image: linear-gradient(to right, white , black);
+        }
+        
+    #hamburger{
+        display:block;
+        height:2rem;
+        }
+            
+    /* aparitie submeniu */ 
+        
+    .ch-submenu:checked~ul.submenu{  
+        background-image: linear-gradient(to bottom right,white,black);
+        }
+
+    .ch-submenu2:checked~ul.submenu{
+        background-image: linear-gradient(to bottom right,white,black);
+        }
+    #iconcasa{
+        position:relative;
+            }            
+
+           
+                
+            
+                
+}
+
+
+@media only screen and (max-width:950px) and (min-width:601px){
+
+ul.menu>li{ 
+    width:6rem;
+    }
+        
+        /*.ch-submenu:hover~ul.submenu{
+            display:block;  
+            }
+        */
+#iconcasa{
+    position:relative;
+    }
+}
+@media only screen and (min-width:950px){
+ 
+/*.ch-submenu:hover~ul.submenu{
+    display:block;  
+    }
+*/
+
+#home:hover #hide{
+    display:inline;
+    animation:afhome;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-duration: 2s;
+}
+
+@keyframes afhome{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+#iconcasa{
+    position:absolute;
+    left:0;
+}
+}
+    

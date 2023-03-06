@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="ro">
+<head>
+
+	<%- include("../fragmente/head.ejs") %>
+    <title>MBPMag - Login</title>
+    
+</head>
+<body>
+
+<%- include("../fragmente/header.ejs") %>
+
+<section id="Login">
+    <h1>Contul personal</h1>
+    <div>
+        <label for="username">Nume de utilizator:</label>
+        <br><input type="text" id="username" name="username">
+    </div>
+    <br>
+    <div>
+        <label for="pass">Parola:</label>
+        <br><input type="password" id="pass" name="password"
+               minlength="8" required>
+    </div>
+    
+    <input type="submit" value="Autentificare">
+    <br>
+    
+</section>
+
+	
+
+
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>

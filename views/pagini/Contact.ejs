@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="ro">
+<head>
+
+    <%- include("../fragmente/head.ejs") %>
+    <link href="/styles/table.css" rel="stylesheet" type="text/css" />
+    <title>MBPMag - Diverse</title>
+    
+</head>
+<body>
+
+<%- include("../fragmente/header.ejs") %>
+
+<section id="Oferte">
+    <h2>Ofertele lunii:</h2>
+    <div id="tabeldiv">
+     <table>
+        <caption> Ofertele se acorda conform tabelului</caption>
+        <thead>
+            <tr>
+                <th>Oferta de luni</th>
+                <th>Oferta Weekend</th>
+                <th>Oferta 3+1</th>
+                <th>Oferta Halloween</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4"><a href="#recsapt">Filmul saptamanii</a></td>
+                <td rowspan="2">Film de actiune</td>
+                <td rowspan="1">Film la alegere</td>
+                <td rowspan="1">Film horror</td>
+            </tr>
+            <tr>
+                
+                
+                <td rowspan="1">Film la alegere</td>
+                <td rowspan="1">Film horror</td>
+            </tr>
+            <tr>
+                
+                <td rowspan="2">Film de actiune</td>
+                <td rowspan="1">Film la alegere</td>
+                <td rowspan="1">Film horror</td>
+            </tr>
+            <tr>
+                
+                <td rowspan="1">Film la alegere</td>
+                <td rowspan="1">Film horror</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Reducere de 50%</td>
+                <td>Reducere de 25%</td>
+                <td>*Al treilea film gratis</td>
+                <td>2 Filme din octombrie 2020 cadou si reducere de 40$ </td>
+            </tr>
+        </tfoot>
+     </table>
+    </div>
+
+</section>
+<section id="Contact">
+    <h2> Date de contact:</h2>
+        
+        Email:<a href = "mailto:al.mdr@gmail.com ">al.mdr@gmail.com</a>
+        <p><em>Telefon: 0123456789</em></p>
+        <address>Strada Cinematografului nr. 14</address>
+        <picture>
+            <source media="(min-width:1000px)" srcset="/img/panou-mare.png">
+            <source media="(min-width:700px)" srcset="/img/logo.png">
+            <img src="/img/panou-mic.png" alt="Panoucinema" style="width:auto; max-width: 1400px;">
+        </picture>        
+</section>
+<section id="Audio">
+<audio controls>
+    
+    <source src="/audio/audio.mp3" type="audio/mpeg">
+
+</audio>
+<br>
+</section>
+<section id="Video">
+<video controls style="width:80%;height:auto">
+    <source src="video/chair.mp4" type="video/mp4">
+    <track default src="video/tracks/sub_chair.vtt" kind="captions" srclang="ro" label="romană2" />
+    <track src="data:image/png;base64, V0VCVlRUIC0gU29tZSB0aXRsZQoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAKPGk+UHJldHVyaTwvaT4gYnVuZT8KCjAwOjAzLjAwMyAtLT4gMDA6MDYuMDAzCjxiPkNlbGUgbWFpIGJ1bmUgb2ZlcnRlPzwvYj4KCjAwOjA3LjE4NyAtLT4gMDA6MDkuNzM3CkNyZWVhemEtdGkgdW4gY29udCBhY3VtIQoKMDA6MDkuNzQ4IC0tPiAwMDoxMy4zMDgKU2kgcHJvZml0YSBkZSBjZWxlIG1haSBub2kgZmlsbWUgZGUgcGUgcGlhdGEhCgo=" 
+    kind="captions" srclang="ro" label="romana" />
+  </video>
+	
+</section>
+
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>

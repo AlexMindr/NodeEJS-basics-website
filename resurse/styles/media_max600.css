@@ -1,0 +1,58 @@
+@media only screen and (max-width:600px){
+
+    
+  body{
+      font-size:0.7rem;
+      margin-top:1rem;
+    }
+    
+    main{
+      margin-top:1.1rem;
+      display:grid;
+      grid-template-columns:1fr;
+    
+      grid-template-areas:
+      "gr-titlu    "
+      "gr-noutati  "
+      "gr-recsapt  "
+      "gr-incurand "
+      "gr-oferte   "
+      "gr-contact  "
+      "gr-login    ";                    
+    }
+
+ div#disclaimer{
+     display:none;
+     
+ }
+
+ #noutati{
+  grid-area:gr-noutati;
+  opacity:1;
+  box-sizing: border-box;
+  background:blue;
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color:aquamarine;
+}
+
+#recsapt{
+  grid-area:gr-recsapt;
+  opacity:1;
+  box-sizing: border-box;
+  background:rgb(238, 234, 8);
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: red;
+}
+
+#incurand{
+  grid-area:gr-incurand;
+  opacity:1;
+  box-sizing: border-box;
+  background:red;
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: gold;
+}
+}

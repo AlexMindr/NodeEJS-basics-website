@@ -1,0 +1,43 @@
+.btn {
+    border: none; /* Remove borders */
+    padding: 8px 10px; /* Some padding */
+    cursor: pointer; /* Mouse pointer on hover */
+    top:2.4rem;
+    position:absolute;
+    right:1rem;
+    opacity:0.7;
+    display:block;
+  }
+  
+  /* Darker background on mouse-over */
+.btn:hover {
+    opacity:1;
+}
+
+body.light{
+/* obligatoriu sa inceapa cu -- */
+    --culoare-text: rgb(0, 0, 0);
+    --culoare-back: rgb(249, 236, 252);/* #ABC --> #AABBCC */
+    --culoare-atentionare: yellow;
+    background:var(--culoare-back);
+}
+body.dark{
+    --culoare-text: rgb(255, 115, 0);
+    --culoare-back: rgb(44, 44, 44);/* #ABC --> #AABBCC */
+    --culoare-atentionare: rgb(21, 201, 21);
+    background:var(--culoare-back);
+}
+
+
+h1, p, div{
+    color: var(--culoare-text);
+
+}
+strong{
+    color: var(--culoare-atentionare);
+}
+
+#bt{
+    background-color: rgb(29, 233, 233);
+    color:rgb(255, 115, 0);
+}

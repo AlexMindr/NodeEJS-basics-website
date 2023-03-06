@@ -1,0 +1,291 @@
+*{
+  padding:0;
+  margin:0;
+  text-indent:0;
+}
+
+html{
+  font-size:16px;
+  font-family: 'BenchNine', sans-serif;
+}
+
+body{
+  padding-top:1em;
+}
+
+main{
+  margin-top:1rem;
+  padding-left:1%;
+  padding-right:1%;
+  box-shadow:inset blue 0px 0px 0.3em;
+  padding-top:1%;
+  box-sizing:border-box;
+  display:grid;
+
+
+  grid-template-columns:repeat(3,1fr);
+
+  grid-template-areas:
+  "gr-titlu   gr-titlu   gr-titlu   "
+  "gr-noutati gr-recsapt gr-incurand"
+  "gr-oferte  gr-oferte  gr-oferte  "
+  "gr-contact gr-contact .          "
+  "gr-login   gr-login   .          ";                    
+}
+
+#titlumag{
+  grid-area:gr-titlu;
+  
+}
+
+
+#noutati p,#recsapt p, #incurand p{color:white;}
+
+#noutati{
+  grid-area:gr-noutati;
+  opacity:0.7;
+  box-sizing: border-box;
+  background: rgb(21, 21, 145);
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: white;
+}
+#noutati:hover{
+  grid-area:gr-noutati;
+  opacity:1;
+  box-sizing: border-box;
+  background:blue;
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color:aquamarine;
+}
+#noutati:hover p{color:aquamarine;}
+
+
+#recsapt{
+  grid-area:gr-recsapt;
+  opacity:0.7;
+  box-sizing: border-box;
+  background: rgb(255, 187, 0);
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: white;
+}
+#recsapt:hover{
+  grid-area:gr-recsapt;
+  opacity:1;
+  box-sizing: border-box;
+  background:rgb(238, 234, 8);
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: red;
+}
+#recsapt:hover p{color:red;}
+
+
+#incurand{
+  grid-area:gr-incurand;
+  opacity:0.7;
+  box-sizing: border-box;
+  background:rgb(141, 18, 18);
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: white;
+}
+#incurand:hover{
+  grid-area:gr-incurand;
+  opacity:1;
+  box-sizing: border-box;
+  background:red;
+  box-shadow:inset violet 0px 0px 1em;
+  padding:1% 1% 1% 1%;
+  color: gold;
+}
+#incurand:hover p{color:gold;}
+
+
+#Oferte{
+  grid-area:gr-oferte;
+  background-color: lavender;
+}
+
+
+#Login{
+  grid-area:gr-login;
+  
+}
+#Contact{
+  grid-area:gr-contact;
+  background-color: lightgreen;
+}
+
+
+
+p{
+  margin-top: 1em;
+  margin-bottom:0.5em;
+}
+section{
+  margin-top:1em;
+  margin-bottom:1em;
+}
+
+.afished3{
+  margin-left:0.5em;
+  font-size:1em;
+  text-transform: uppercase;
+}
+.alinhome{
+  margin-left:15em;
+}
+
+
+
+body #home{
+    counter-reset: c1;
+   }
+.hed2::before{
+    counter-increment:c1;
+    content:  counter(c1) "."
+   }
+
+.videoprez{
+  margin-left:20%;
+  position:relative; 
+  padding-bottom:200px; 
+  padding-top:30px; 
+  height:0; 
+  overflow:hidden;
+}
+
+.videomarimeprez{
+  position:absolute; 
+  top:0; 
+  left:0; 
+  width:300px; 
+  height:200px;
+}
+
+
+div#disclaimer{
+    margin-left:0;
+    position:fixed;
+    width:100%;
+    bottom:0;
+    left:0;
+    animation: alunecare;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    text-align: center;
+    font-size: 15px;
+  }
+@keyframes alunecare{
+    0%{
+    opacity:1;
+    transform:translateX(-100%);
+    background: red;
+    border-color: yellow;
+    color:midnightblue;
+    }
+    25%{
+    background:yellow;
+    border-color:red;    
+    }
+    50%{
+    transform:translateX(0);
+    background:red;
+    border-color:yellow;
+    }
+    97%{
+    opacity:1;    
+    }
+    100%{
+    opacity:0;
+    
+    }
+}
+
+::cue {
+  background:white;
+  font-style:normal;
+  color:black;
+  text-align:center;
+  vertical-align: top;
+  
+  }
+      
+
+
+#link-top{
+  position:fixed;
+  bottom:1.1em;
+  opacity:0.4;
+  left:0.1em;
+  width:2.5rem;
+  box-sizing: border-box;
+  height:3rem;
+  line-height:3rem;
+  text-align:center;
+  border:1px solid grey;
+  border-radius:75%;
+  background: rgb(0, 0, 0);
+}
+#link-top:hover{
+  opacity:1;
+}
+#triunghi{
+  height:0px;
+  width:0;
+  display:inline-block;
+  border-bottom:1.5rem solid red;
+  border-left:1rem solid transparent;
+  border-right:1rem solid transparent;
+  vertical-align: top;
+  transform: translateY(30%);
+}
+
+@media print {
+  body{
+    background:white;
+    background-image:none;
+    color:black;
+  }
+  img{
+    display:none;
+  }
+  header{
+    display:none;
+  }
+  header #topnav{
+    display:none;
+  }
+  div#disclaimer{
+    animation:none;
+    top:0;
+    
+  }
+  iframe{
+    display:none;
+
+  }
+  video{
+    display:none;
+  }
+  #link-top{
+    display:none;
+  } 
+  audio{
+    display:none;
+  }
+  .alinhome{
+    position:relative;
+    margin-left:0;
+    left:0;
+  }
+  #Login{
+    display:none;
+  }
+}

@@ -1,0 +1,24 @@
+@media only screen and (max-width:950px) and (min-width:601px){
+
+
+ 
+    body{
+        margin-top:1rem;
+        font-size:0.8rem;
+      }
+      
+      main{
+        margin-top:1rem;
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+      
+        grid-template-areas:
+        "gr-titlu    gr-titlu   "
+        "gr-noutati  gr-recsapt "
+        "gr-incurand gr-incurand"
+        "gr-oferte   gr-oferte  "
+        "gr-contact  gr-contact "
+        "gr-login    gr-login   ";                    
+      }
+
+}
